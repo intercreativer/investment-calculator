@@ -25,10 +25,10 @@ export class UserInputComponent {
     console.log('Duration:', this.enteredDuration);
 
     this.investmentDataSubmitted.emit({
-      InitialInvestment: parseInt(this.enteredInitialInvestment),
-      AnnualInvestment: parseInt(this.enteredAnnualInvestment),
-      ExpectedReturn: parseInt(this.enteredExpectedReturn), 
-      Duration: parseInt(this.enteredDuration)
+      InitialInvestment: +this.enteredInitialInvestment,
+      AnnualInvestment: +this.enteredAnnualInvestment,
+      ExpectedReturn: +this.enteredExpectedReturn, 
+      Duration: +this.enteredDuration
     });
 
   }
